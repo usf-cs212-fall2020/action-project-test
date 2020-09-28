@@ -16,4 +16,4 @@ runs:
     working-directory: ${{ inputs.main_path }}
     run: |
       echo "Running ${{ inputs.test_class }} Tests..."
-      mvn -ntp -Dtest="${{ inputs.test_class }}*" test
+      mvn -ntp -DcompileOptionFail="false" -Dtest="${{ inputs.test_class }}*" test
