@@ -15,5 +15,5 @@ runs:
     shell: bash
     working-directory: ${{ inputs.main_path }}
     run: |
-      echo "Running Project Tests..."
+      echo "Running ${{ inputs.test_class }} Tests..."
       mvn -ntp -Dtest="${{ inputs.test_class }}*" test
